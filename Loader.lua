@@ -13,15 +13,16 @@ local Window = Library:CreateWindow"TSB Cheat 1488"
 Window:AddFolder"Main"
 
 _G.Stealer = false
+_G.SafeMode = true
+_G.ScanDelay = 5
+_G.TPDelay = 10
+_G.Delayed = false
 
  
 --Toggle
 Window:AddToggle({text = "Kill Stealer", flag = "toggle", state = false, callback = function(val) 
     print(val)
     _G.Stealer = val
-    _G.ScanDelay = 5
-    _G.TPDelay = 10
-    _G.Delayed = false
 
     while wait(_G.ScanDelay) do
         if _G.Stealer == true and _G.Delayed == false then
@@ -79,7 +80,8 @@ end})
 
 
 Window:AddToggle({text = "Safe Mode", flag = "toggle1", state = true, callback = function(val) 
-    print(val) 
+    print(val)
+    _G.SafeMode = val
 end})
 --If the state is set to true by default then it will fire the callback when the library is initialized
  
