@@ -4,7 +4,7 @@ local LocalPlayer = Players.LocalPlayer
 local Character = LocalPlayer.Character
 local Humanoid = Character.Humanoid
 
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/edJT9EGX", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zedikik/uwuware/main/Loader.lua", true))()
 --To close/open the UI (after it's been initialized) use Library:Close() to toggle it, use the keybind option to quickly make a toggle for it without hassle (there is an example below)
  
 --Making a window
